@@ -20,7 +20,7 @@ export default function UserList() {
           </li>
         ))}
       </ul>
-      <a href="/">Kembali ke Home</a> {/* Link kembali ke halaman utama */}
+      <a href="/">Kembali ke Beranda</a> {/* Link kembali ke halaman utama */}
     </div>
   );
 }

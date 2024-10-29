@@ -6,6 +6,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
+import { LoaderFunction } from "@remix-run/node";
+import { checkSession } from "~/utils/auth.server";
 
 import "./tailwind.css";
 
@@ -40,7 +42,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+export const loader: LoaderFunction = async ({ request }) => {
+  await checkSession(request);
+  return null;
+};
+
 export default function App() {
   return <Outlet />;
 }
-
