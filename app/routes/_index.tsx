@@ -1,5 +1,4 @@
-import { Link } from '@remix-run/react';
-import { Form } from "@remix-run/react";
+import { Link, Form } from '@remix-run/react';
 import { useEffect, useState } from 'react';
 
 export default function Index() {
